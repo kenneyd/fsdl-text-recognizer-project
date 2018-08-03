@@ -22,7 +22,7 @@ def mlp(input_shape: Tuple[int, ...],
     for _ in range (num_layers):  
         model.add(Dense(layer_size, activation='relu'))
         model.add(Dropout(dropout_amount))
-    model.add(Dense(num_classes, activation='softmax'))
+    model.add(Dense(num_classes, activation='sigmoid'))
     ##### Your code above (Lab 1)
 
     return model
